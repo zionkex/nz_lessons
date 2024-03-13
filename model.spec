@@ -2,10 +2,10 @@
 
 
 a = Analysis(
-    ['C:\\Users\\Dell\\Documents\\python\\model.py'],
+    ['C:\\Users\\Dell\\Documents\\git\\nz_lessons\\model.py'],
     pathex=[],
     binaries=[],
-    datas=[('C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\customtkinter', 'customtkinter/')],
+    datas=[('C:\\Users\\Dell\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages/customtkinter', 'customtkinter/')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -25,7 +25,7 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    console=True,
+    console=False,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,

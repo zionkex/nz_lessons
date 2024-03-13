@@ -177,7 +177,6 @@ class WebAutomationApp():
         # empty_lessons_indices = []
 
         for i in range(len(chan)):
-            print(i)
             leson = self.driver.find_elements('.dzc-theme')
             self.driver.sleep(1)
             if not leson[i].text.strip():
@@ -186,10 +185,11 @@ class WebAutomationApp():
                 element = chan[i]
                 element.click()
                 leson = self.driver.find_elements('.dzc-theme')
-                print(row_index)
                 cell_text = table.cell(row_index - 1 + i, column_index - 1).text
                 self.driver.type('#osvitaschedulereal-lesson_topic', cell_text)
                 self.driver.type('#osvitaschedulereal-lesson_number_in_plan', str(lesson_number+ i))
+                self.driver.sleep(1)
+                self.driver.click("//select[@id='osvitaschedulereal-hometask_to']/option[2]")
                 self.driver.sleep(1)
                 self.driver.click_link(save_button_text)
                 self.driver.sleep(1)
